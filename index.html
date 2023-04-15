@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concept 1</title>
+</head>
+
+<body>
+
+    <script type="module">
+
+        // import kaboom
+        import kaboom from "https://unpkg.com/kaboom/dist/kaboom.mjs";
+
+        // initialize kaboom
+        kaboom({
+            width: 640,
+            height: 480,
+            canvas: document.querySelector("#mycanvas"),
+            background: [0, 0, 255,],
+        })
+
+        // add assets
+        loadSprite("player", "player.png")
+        loadSprite("door", "door.png")
+
+        const player = add([
+            sprite("player"),
+            pos(300, 250),
+        ])
+
+        add([
+            text("register", {size: 48,}),
+            pos(120, 80),
+        ]);
+
+        const registerDoor = add([
+            sprite("door"),
+            pos(0, 250),
+        ])
+
+        const submitDoor = add([
+            sprite("door"),
+            pos(540, 250),
+        ])
+
+        // move left / right 100 pixels per second
+        onKeyDown("left", () => {
+            player.move(-100, 0)
+        })
+
+        onKeyDown("right", () => {
+            player.move(100, 0)
+        })
+
+        onKeyDown("up", () => {
+            player.move(0, -100)
+            window.location.href = '/register.html';
+        })
+
+    </script>
+</body>
+
+</html>
