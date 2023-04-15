@@ -6,7 +6,7 @@ export const k = kaboom({
     width: 640,
     height: 480,
     background: [0, 0, 255],
-    canvas: document.querySelector("mycanvas") // gameplay is drawn to canvas
+    canvas: document.querySelector("mycanvas")
 });
 
 // make kaboom available in other scripts
