@@ -5,71 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./styles.css">
+
     <title>Concept 1</title>
 </head>
 
 <body>
 
-    <script type="module">
+    <!-- Canvas hosts the actual gameplay as rendered with Kaboom -->
+    <canvas id="mycanvas"></canvas>
 
-        // import kaboom
-        import kaboom from "https://unpkg.com/kaboom/dist/kaboom.mjs";
+    <!-- main js file handles game loop -->
+    <script type="module" src="./main.js"></script>
 
-        // initialize kaboom
-        kaboom({
-            width: 640,
-            height: 480,
-            canvas: document.querySelector("#mycanvas"),
-            background: [0, 0, 255,],
-        })
-
-        // add assets
-        loadSprite("player", "player.png")
-
-        loadSprite("door", "door.png")
-
-        const player = add([
-            sprite("player"),
-            pos(300, 250),
-        ])
-
-        add([
-            text("register", { size: 24 }),
-            color(255, 242, 0),
-            pos(20, 220),
-        ]);
-
-        const registerDoor = add([
-            sprite("door"),
-            pos(20, 250),
-        ])
-
-        add([
-            text("submit", { size: 24 }),
-            color(255, 242, 0),
-            pos(530, 220),
-        ]);
-
-        const submitDoor = add([
-            sprite("door"),
-            pos(520, 250),
-        ])
-
-        // move left / right 100 pixels per second
-        onKeyDown("left", () => {
-            player.move(-100, 0)
-        })
-
-        onKeyDown("right", () => {
-            player.move(100, 0)
-        })
-
-        onKeyDown("up", () => {
-            player.move(0, -100)
-            window.location.href = '/register.html';
-        })
-
-    </script>
 </body>
 
 </html>
