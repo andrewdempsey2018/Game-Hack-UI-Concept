@@ -33,18 +33,25 @@
         ])
 
         add([
-            text("register", {size: 48,}),
-            pos(120, 80),
+            text("register", { size: 24 }),
+            color(255, 242, 0),
+            pos(20, 220),
         ]);
 
         const registerDoor = add([
             sprite("door"),
-            pos(0, 250),
+            pos(20, 250),
         ])
+
+        add([
+            text("submit", { size: 24 }),
+            color(255, 242, 0),
+            pos(530, 220),
+        ]);
 
         const submitDoor = add([
             sprite("door"),
-            pos(540, 250),
+            pos(520, 250),
         ])
 
         // move left / right 100 pixels per second
