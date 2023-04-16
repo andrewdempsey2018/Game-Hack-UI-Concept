@@ -1,7 +1,7 @@
 // import kaboom lib from CDN
 import kaboom from "https://unpkg.com/kaboom/dist/kaboom.mjs";
 
-// initialize kaboom context
+// initialise kaboom context
 export const k = kaboom({
     width: 640,
     height: 480,

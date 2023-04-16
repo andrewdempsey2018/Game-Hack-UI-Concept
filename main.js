@@ -51,14 +51,14 @@ onKeyDown("right", () => {
 
 // navigate to register page when player sprite collides with register door sprite
 onCollide("register_door", "player_sprite", () => {
-    window.location.href = '/register.html';
+    window.location.href = 'register.html';
 })
 
 // navigate to submit page when player sprite collides with submit door sprite
 onCollide("submit_door", "player_sprite", () => {
-    window.location.href = '/submit.html';
+    window.location.href = 'submit.html';
 })
 
 /* kaboom by default will not give the game canvas focus. Below line 
-   explisitly gives the canvas focus on load */
+   explicitly gives the canvas focus on load */
 k.canvas.focus()
