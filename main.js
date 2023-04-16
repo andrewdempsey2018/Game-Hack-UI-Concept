@@ -50,13 +50,15 @@ onKeyDown("right", () => {
 })
 
 // navigate to register page when player sprite collides with register door sprite
+// hardcoded URL here, relative link is not working for now
 onCollide("register_door", "player_sprite", () => {
-    window.location.href = './register.html';
+    window.location.href = 'https://andrewdempsey2018.github.io/Game-Hack-UI-Concept/register';
 })
 
 // navigate to submit page when player sprite collides with submit door sprite
+// hardcoded URL here, relative link is not working for now
 onCollide("submit_door", "player_sprite", () => {
-    window.location.href = './submit.html';
+    window.location.href = 'https://andrewdempsey2018.github.io/Game-Hack-UI-Concept/submit';
 })
 
 /* kaboom by default will not give the game canvas focus. Below line 
